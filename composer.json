@@ -1,0 +1,34 @@
+{
+    "name": "cblink-service/oauth",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick",
+            "email": "me@xieying.vip"
+        }
+    ],
+    "require": {
+        "laravel/passport": "^9.3",
+        "overtrue/laravel-passport-cache-token": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cblink\\Service\\OAuth\\": "src"
+        }
+    },
+    "scripts": {
+        "check-style": "./vendor/bin/php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",
+        "fix-style": "./vendor/bin/php-cs-fixer fix --using-cache=no --config=.php_cs --ansi"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cblink\\Service\\OAuth\\ServiceProvider"
+            ]
+        }
+    }
+}
