@@ -9,11 +9,12 @@
         }
     ],
     "require": {
-        "laravel/passport": "^9.3",
-        "overtrue/laravel-passport-cache-token": "^1.0"
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16"
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "orchestra/testbench": "^5.5"
     },
     "autoload": {
         "psr-4": {
