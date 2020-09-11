@@ -9,6 +9,39 @@
 $ composer require cblink-service/oauth -vvv
 ```
 
+
+## Configure
+
+config/services.php
+
+```php
+return [
+    // ...
+    
+    // add
+    'service-oauth' => [
+        'base_url' => '',
+        'token' => ''
+    ]
+];
+```
+
+config/auth.php
+```php
+<?php
+return [
+    'guards' => [
+        // ...
+
+        // add
+        'service' => [
+            'driver' => 'service'
+        ]
+    ]
+];
+```
+
+
 ## Usage
 
 TODO

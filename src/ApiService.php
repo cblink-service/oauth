@@ -79,7 +79,16 @@ class ApiService
                 $options
             );
 
-        if ($response->getStatusCode() !== 200) {
+        return $this->response($response);
+    }
+
+    /**
+     * @param $response
+     * @return false|mixed
+     */
+    public function response($response)
+    {
+        if ($response->getStatusCode() === 200) {
 
             $body = json_decode($response->getBody()->getContents(), true);
 
@@ -98,7 +107,7 @@ class ApiService
      */
     protected function url($uri)
     {
-        return rtrim($this->baseUrl, '/') . ltrim($uri, '/');
+        return rtrim($this->baseUrl, '/') . '/' . ltrim($uri, '/');
     }
 
 
